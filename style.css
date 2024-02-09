@@ -1,0 +1,50 @@
+body{
+    background-color: blue;
+    text-indent: 10px;
+    border-style: hidden;
+    padding: auto;
+}
+h1{
+    text-align: center;
+    padding-top: 40px;
+    color: chartreuse;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.logo{
+    
+    text-align: center;
+}
+ul{
+    display: flex;
+}
+ul .scoreBoardA{
+    display: inline;
+    margin-left: 360px;
+    padding-inline-end: 300px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(212, 242, 15);
+}
+ul .scoreBoardB{
+    display: inline;
+    margin-right: 160px;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    font-weight: 900;
+    color: rgb(212, 242, 15);
+       
+}
+#corrA{
+    color: black;
+    fill: green;
+}
+#corrB{
+    color: black;
+    fill: green;
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <h1>Pictionary@ASU</h1>
+    <div class="logo"><img src="C:\Users\witin\Downloads\Pencil_Logo_Design.webp" width="200" height="160"></div>
+    
+    <script>
+      let teamA = prompt("Enter team name: ", "TeamA");
+      let teamB = prompt("Enter team name: ", "TeamB");
+      let scoreA = 0;
+      let scoreB = 0;    
+    </script>
+    <ul>
+      <li class="scoreBoardA">
+        <section><script>document.write(teamA)</script></section>
+        <section id = "score_A">score: 0</section>
+          <button id = "corrA">correct</button>
+          <button id = "clearA">undo</button> 
+      </li>
+      
+      <li class="scoreBoardB">
+        <section><script>document.write(teamB)</script></section>
+        <section id = "score_B">score: 0</section>
+          <button id = "corrB">correct</button>
+          <button id = "clearB">undo</button>
+      
+      </li>
+      
+    </ul>
+    <script>
+          // Function to update the score display
+      function updateScoreDisplay() {
+        document.getElementById('score_A').innerText = "score:"+ scoreA;
+        document.getElementById('score_B').innerText = "score:"+ scoreB;
+      }
+
+      // Functions to handle increasing the scores
+      function increaseScoreA() {
+        // Check if the score is less than 1000 before incrementing
+        if (scoreA < 1000) {
+          scoreA += 100;
+          updateScoreDisplay();
+        } else {
+          alert('You have reached the maximum score of 1000 points!');
+        }
+      }
+      function increaseScoreB() {
+        // Check if the score is less than 1000 before incrementing
+        if (scoreB < 1000) {
+          scoreB += 100;
+          updateScoreDisplay();
+        } else {
+          alert('You have reached the maximum score of 1000 points!');
+        }
+      }
+
+      // Functions to handle undoing the score increase
+      function undoScoreA() {
+        // Check if the score is greater than 0 before decrementing
+        if (scoreA > 0) {
+          scoreA -= 100;
+          updateScoreDisplay();
+        } else {
+          alert('Score cannot be negative!');
+        }
+      }
+      function undoScoreB() {
+        // Check if the score is greater than 0 before decrementing
+        if (scoreB > 0) {
+          scoreB -= 100;
+          updateScoreDisplay();
+        } else {
+          alert('Score cannot be negative!');
+        }
+      }
+
+      // Add click event listeners to the buttons
+      document.getElementById('corrA').addEventListener('click', increaseScoreA);
+      document.getElementById('clearA').addEventListener('click', undoScoreA);
+      
+      document.getElementById('corrB').addEventListener('click', increaseScoreB);
+      document.getElementById('clearB').addEventListener('click', undoScoreB);
+
+      // Update the score display initially
+      updateScoreDisplay();
+  </script> 
+  </body>
+</html>
